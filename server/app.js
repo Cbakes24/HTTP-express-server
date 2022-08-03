@@ -2,8 +2,20 @@
 // const http = require('http');
 // const server = http.createServer((req, res) => {
 
-// STEP 1: Import and initialize server, configure for JSON requests
-// Your code here
+    const express = require('express')
+    const app = express()
+
+app.get('/users/:userId', (req, res) => {
+    res.send(`User details for userId: ${2}`)
+})
+
+
+    const port = 5000
+
+    app.listen(port, () => {
+     console.log('server is listening on port', port)
+    })
+
 
 // HTTP Server: Handle route with param (/users/:userId) sending plain-text response
 //     let reqBody = "";
